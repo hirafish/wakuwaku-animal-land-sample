@@ -1,0 +1,20 @@
+{
+    "name": "BugZoo.Editor",
+    "rootNamespace": "BugZoo.Editor",
+    "references": [
+        "BugZoo.Runtime",
+        "UnityEngine.UI",
+        "Unity.Timeline"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
