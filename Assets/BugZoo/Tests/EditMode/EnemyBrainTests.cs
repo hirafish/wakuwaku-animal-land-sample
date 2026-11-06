@@ -1,4 +1,4 @@
-using BugZoo.Part1.Q09;
+using BugZoo.Steps.Step05;
 using NUnit.Framework;
 
 namespace BugZoo.Tests.EditMode

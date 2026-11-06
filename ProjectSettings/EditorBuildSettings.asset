@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BugZoo/Menu/Menu.unity
+    guid: 213561d642a1a4877855e1b967d63662
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step01_ScoreNotAdded/Step01_ScoreNotAdded.unity
+    guid: 949cd7a2c466a4062be28c2a29e6783f
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step01b_InitialValueIgnored/Step01b_InitialValueIgnored.unity
+    guid: 3efc9d8b022d84bbfb49975a4f288a20
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step02_ScoreDoubled/Step02_ScoreDoubled.unity
+    guid: c1a46109569854fe5ae3adc8c330b52d
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step03_MissingTarget/Step03_MissingTarget.unity
+    guid: 0ecd3792504aa45f582040cf95190bac
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step04_ButtonBlocked/Step04_ButtonBlocked.unity
+    guid: c7065cbd5168342d69e42625badc23f6
+  - enabled: 1
+    path: Assets/BugZoo/Steps/Step05_RareStateBug/Step05_RareStateBug.unity
+    guid: 6454b1c94f5e84354aad7a9d19822682
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

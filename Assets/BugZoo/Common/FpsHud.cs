@@ -10,6 +10,7 @@ namespace BugZoo.Common
         private int _frames;
         private float _elapsed;
         private float _fps;
+        private string _boxText = "計測中...";
 
         private void OnEnable()
         {
@@ -27,11 +28,17 @@ namespace BugZoo.Common
         {
             _frames++;
             _elapsed += Time.unscaledDeltaTime;
-            if (_elapsed >= 0.5f)
+            if (_elapsed >= 0.25f)
             {
                 _fps = _frames / _elapsed;
                 _frames = 0;
                 _elapsed = 0f;
+
+                var gcBytes = _gcAllocRecorder.Valid ? $"{_gcAllocRecorder.LastValue:N0} B" : "取得不可";
+                var mainMs = _mainThreadRecorder.Valid
+                    ? $"{_mainThreadRecorder.LastValue * 1e-6f:F2} ms"
+                    : $"{Time.unscaledDeltaTime * 1000f:F2} ms";
+                _boxText = $"FPS: {_fps:F1}\nFrame: {mainMs}\nGC Alloc/Frame: {gcBytes}";
             }
         }
 
@@ -42,12 +49,7 @@ namespace BugZoo.Common
             var height = 96f * scale;
             var rect = new Rect(Screen.width - width - 12f, 12f, width, height);
 
-            var gcBytes = _gcAllocRecorder.Valid ? $"{_gcAllocRecorder.LastValue} B" : "取得不可";
-            var mainMs = _mainThreadRecorder.Valid
-                ? $"{_mainThreadRecorder.LastValue * 1e-6f:F2} ms"
-                : $"{Time.unscaledDeltaTime * 1000f:F2} ms";
-
-            GUI.Box(rect, $"FPS: {_fps:F1}\nFrame: {mainMs}\nGC Alloc/Frame: {gcBytes}");
+            GUI.Box(rect, _boxText);
         }
     }
 }

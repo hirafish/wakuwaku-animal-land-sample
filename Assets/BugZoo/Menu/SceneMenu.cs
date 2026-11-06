@@ -14,7 +14,7 @@ namespace BugZoo.Menu
             GUI.skin.box.fontSize = Mathf.RoundToInt(18 * scale);
 
             var rect = new Rect(24f, 24f, Screen.width - 48f, Screen.height - 48f);
-            GUI.Box(rect, "BugZoo — デバッグ練習シーン一覧");
+            GUI.Box(rect, "わくわくアニマルランド (Wakuwaku Animal Land) — デバッグ術 練習シーン一覧 (Step 1〜5)");
 
             GUILayout.BeginArea(new Rect(rect.x + 16f, rect.y + 44f * scale, rect.width - 32f, rect.height - 60f * scale));
             _scroll = GUILayout.BeginScrollView(_scroll);

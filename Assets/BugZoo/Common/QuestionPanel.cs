@@ -6,7 +6,7 @@ namespace BugZoo.Common
 {
     public sealed class QuestionPanel : MonoBehaviour
     {
-        [SerializeField] private string _questionId = "Q01";
+        [SerializeField] private string _questionId = "Step 01";
         [SerializeField] private string _title = "";
         [SerializeField, TextArea(3, 10)] private string _steps = "";
 
@@ -23,6 +23,16 @@ namespace BugZoo.Common
 
         private void Start()
         {
+            // 動物アセット（Quirky Series）未導入のままシーンを直接開いた場合でも、
+            // 親の Cube / Capsule が非表示にならないようフォールバックする
+            foreach (var mr in FindObjectsByType<MeshRenderer>(FindObjectsSortMode.None))
+            {
+                if (!mr.enabled && mr.GetComponentsInChildren<Renderer>(true).Length <= 1)
+                {
+                    mr.enabled = true;
+                }
+            }
+
             var behaviours = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None);
             foreach (var behaviour in behaviours)
             {

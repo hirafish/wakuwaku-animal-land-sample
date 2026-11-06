@@ -49,3 +49,13 @@ sysinfo.txt
 
 # macOS
 .DS_Store
+
+# 外部インポートしたAsset Store素材（規約保護・再配布防止のためGit除外）
+Assets/Quirky Series Ultimate/
+Assets/Quirky Series Ultimate.meta
+Assets/Tanya_Er/
+Assets/Tanya_Er.meta
+Assets/Dog/
+Assets/Dog.meta
+Assets/*_Dog/
+Assets/*_Dog.meta
